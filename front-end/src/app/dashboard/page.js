@@ -5,6 +5,9 @@ function Dashboard (){
         <>
           <h1>I'm the Dashboard</h1>
           <Card />
+          <Card />
+          <Card />
+          <Card />
         </>
     )
 }
