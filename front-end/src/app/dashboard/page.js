@@ -1,5 +1,8 @@
+"use client"
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Card from "@/components/Card";
+import Form from "@/components/Form";
 
 const example=[
   {
@@ -24,9 +27,25 @@ const example=[
 
 
 function Dashboard (){
+  const [ formDisplay, setFormDisplay ] = useState("hidden");
+
+  const toggleForm = () => {
+    if(formDisplay === "hidden"){
+      setFormDisplay("block")
+    }else{
+      setFormDisplay("hidden")
+    }
+  }
+
     return(
         <>
           <Navbar/>
+          <section >
+            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1 text-xs sm:text-sm" onClick={toggleForm}>+</button>
+            <div className={formDisplay}>
+              <Form/>
+            </div>
+          </section>
           <section>
             <p>Sort</p>
             <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1 text-xs sm:text-sm">Title</button>

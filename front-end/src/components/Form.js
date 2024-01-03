@@ -1,6 +1,6 @@
 const Form = () => {
     return(
-        <form className="border border-black rounded-md flex flex-col p-1 m-5">
+        <form className="absolute bg-white border border-black rounded-md flex flex-col p-1 m-5 max-w-48">
             <input className="border border-red-300 m-1 p-1" placeholder="Title"></input>
             <input className="border border-red-300 m-1 p-1" placeholder="Author"></input>
             <input className="border border-red-300 m-1 p-1" placeholder="Language"></input>
