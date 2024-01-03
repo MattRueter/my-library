@@ -1,4 +1,5 @@
-import Card from "@/components/card";
+import Navbar from "@/components/Navbar";
+import Card from "@/components/Card";
 
 const example=[
   {
@@ -25,12 +26,13 @@ const example=[
 function Dashboard (){
     return(
         <>
+          <Navbar/>
           <section>
             <p>Sort</p>
-            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1">Title</button>
-            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1">Author</button>
-            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1">Status</button>
-            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1">Language</button>
+            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1 text-xs sm:text-sm">Title</button>
+            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1 text-xs sm:text-sm">Author</button>
+            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1 text-xs sm:text-sm">Status</button>
+            <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1 text-xs sm:text-sm">Language</button>
           </section>
           <ul>
             {example.map((book, index ) =>(
