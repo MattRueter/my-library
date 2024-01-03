@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import myBooks from '../../public/myBooks.svg';
 
 export default function Home() {
@@ -12,8 +13,8 @@ export default function Home() {
         height={400}
         priority
       />
-      <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1">Register</button>
-      <button className="border-2 border-black rounded-md bg-red-300 p-2 m-1">Login</button>
+      <Link className="border-2 border-black rounded-md bg-red-300 p-2 m-1" href="/auth">Register</Link>
+      <Link className="border-2 border-black rounded-md bg-red-300 p-2 m-1" href="/auth">Login</Link>
     </div>
   )
 }
