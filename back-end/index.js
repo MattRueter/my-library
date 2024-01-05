@@ -4,7 +4,8 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
-
+const LocalStrategy = require('passport-local');
+const loginRouter = require("./loginRoute");
 
 dotenv.config();
 const port = process.env.PORT
@@ -17,8 +18,28 @@ app.use(cors())
 app.use(express.json())
 app.use(morgan("tiny"));
 
+//SESSION-------------------------------------------------------------------
+app.use(
+    session({
+        secret : "myDevSecret",
+        resave : false,
+        saveUninitialized : false,
+        store,
+    })
+)
+//PASSPORT MOUNTING---------------------------------------------------------
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+
+
+
+
 
 //routes
+app.use("/login", loginRouter);
 app.get('/', (req, res) => {
     res.send("Hello My Library")
 });
