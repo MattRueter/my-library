@@ -6,7 +6,7 @@ const passport = require("passport");
 //import { checkIfUserExits } from "../utils/authentication_utils.js";
 
 const loginRouter = express.Router();
-const usePassportStrategy = require("./auth");
+const usePassportStrategy = require("..auth/");
 //const { usePassportStrategy } = authMethods;
 //const { hashPassword } = hashsingMethods;
 //const secret = process.env.SECRET

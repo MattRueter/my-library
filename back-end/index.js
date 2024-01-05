@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
-const loginRouter = require("./loginRoute");
+const loginRouter = require("./routes/loginRoute");
 
 dotenv.config();
 const port = process.env.PORT
